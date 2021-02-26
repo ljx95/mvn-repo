@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.ljx.permission</groupId>
+    <artifactId>data-permission-helper-starter</artifactId>
+    <version>1.0.7-RELEASE</version>
+    <name>data-permission-helper-starter</name>
+    <url>https://github.com/ljx95/mvn-repo</url>
+    <parent>
+        <groupId>org.hzero.boot</groupId>
+        <artifactId>hzero-boot-parent</artifactId>
+        <version>1.2.0.RELEASE</version>
+    </parent>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <java.version>1.8</java.version>
+        <github.global.server>github</github.global.server>
+    </properties>
+
+    <repositories>
+        <repository>
+            <id>test-one</id>
+            <url>https://github.com/ljx95/mvn-repo/master/</url>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>HzeroRelease</id>
+            <name>Hzero-Release Repository</name>
+            <url>http://nexus.saas.hand-china.com/content/repositories/Hzero-Release/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>HzeroSnapshot</id>
+            <name>Hzero-Snapshot Repository</name>
+            <url>http://nexus.saas.hand-china.com/content/repositories/Hzero-Snapshot/</url>
+            <releases>
+                <enabled>false</enabled>
+                <updatePolicy>always</updatePolicy>
+            </releases>
+        </repository>
+    </repositories>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hzero.starter</groupId>
+            <artifactId>hzero-starter-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.hzero.starter</groupId>
+            <artifactId>hzero-starter-mybatis-mapper</artifactId>
+            <version>1.3.0.RELEASE</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.hzero.boot</groupId>
+            <artifactId>hzero-boot-platform</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-netflix-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-dependencies</artifactId>
+            <version>Finchley.SR2</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.mrpangu</groupId>
+            <artifactId>hzero-plus</artifactId>
+            <version>0.0.15.RELEASE</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.hzero.starter</groupId>-->
+<!--            <artifactId>hzero-starter-export</artifactId>-->
+<!--            <version>1.5.3.RELEASE</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>io.github.openfeign</groupId>
+            <artifactId>feign-core</artifactId>
+        </dependency>
+
+        <!--添加fastjson依赖-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.7</version>
+        </dependency>
+
+<!--        &lt;!&ndash; 引入 pdfBox, itext 处理 pdf 文件或流 &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.pdfbox</groupId>-->
+<!--            <artifactId>pdfbox</artifactId>-->
+<!--            <version>2.0.8</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.lowagie</groupId>-->
+<!--            <artifactId>itext</artifactId>-->
+<!--            <version>2.0.8</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.boot</groupId>-->
+<!--            <artifactId>spring-boot-starter</artifactId>-->
+<!--        </dependency>-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.7</version>
+        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.aspectj</groupId>-->
+<!--            <artifactId>aspectjrt</artifactId>-->
+<!--            <version>1.5.4</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis</groupId>-->
+<!--            <artifactId>mybatis</artifactId>-->
+<!--            <version>3.4.2</version>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.hzero.starter</groupId>-->
+<!--            <artifactId>hzero-starter-mybatis-mapper</artifactId>-->
+<!--            <version>1.3.1.RELEASE</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.hzero.starter</groupId>-->
+<!--            <artifactId>hzero-starter-core</artifactId>-->
+<!--            <version>1.3.1.RELEASE</version>-->
+<!--        </dependency>-->
+
+    </dependencies>
+
+    <distributionManagement>
+        <repository>
+            <id>hcm-releases</id>
+            <name>Hcm Releases</name>
+            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>hcm-snapshots</id>
+            <name>Hcm Snapshots</name>
+            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>hcm-releases</id>-->
+<!--            <name>Hcm Releases</name>-->
+<!--            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-releases/</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>hcm-snapshots</id>-->
+<!--            <name>Hcm Snapshots</name>-->
+<!--            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-snapshots/</url>-->
+<!--            <releases>-->
+<!--                <enabled>false</enabled>-->
+<!--                <updatePolicy>always</updatePolicy>-->
+<!--            </releases>-->
+<!--        </repository>-->
+
+<!--    </repositories>-->
+
+<!--    <distributionManagement>-->
+<!--        <repository>-->
+<!--            <id>hcm-releases</id>-->
+<!--            <name>Hcm Releases</name>-->
+<!--            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-releases</url>-->
+<!--        </repository>-->
+<!--        <snapshotRepository>-->
+<!--            <id>hcm-snapshots</id>-->
+<!--            <name>Hcm Snapshots</name>-->
+<!--            <url>http://nexus.saas.hand-china.com/content/repositories/hcm-snapshots</url>-->
+<!--        </snapshotRepository>-->
+<!--    </distributionManagement>-->
+<!--    <build>-->
+<!--        <finalName>data-permission-helper-starter</finalName>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                <groupId>org.apache.maven.plugins</groupId>-->
+<!--                <artifactId>maven-jar-plugin</artifactId>-->
+<!--                <configuration>-->
+<!--                    <excludes>-->
+<!--                        <exclude>**/mdm/*Application.*</exclude>-->
+<!--                        <exclude>**/*.yml</exclude>-->
+<!--                        <exclude>**/*.groovy</exclude>-->
+<!--                        <exclude>**/db/</exclude>-->
+<!--                    </excludes>-->
+<!--                </configuration>-->
+<!--            </plugin>-->
+<!--        </plugins>-->
+
+<!--    </build>-->
+
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- 仓库信息 -->
+    <scm>
+        <connection>https://github.com/MrPangu/OSSRH-56637.git</connection>
+        <developerConnection>https://github.com/MrPangu/OSSRH-56637.git
+        </developerConnection>
+        <url>https://github.com/MrPangu/OSSRH-56637.git</url>
+    </scm>
+
+    <!-- 开发人员信息 -->
+    <developers>
+        <developer>
+            <name>ljx</name>
+            <email>1073562933@qq.com</email>
+            <organization>https://github.com/ljx95/mvn-repo</organization>
+            <timezone>+8</timezone>
+        </developer>
+    </developers>
+
+    <build>
+        <finalName>data-permission-helper-starter</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.1</version>
+                <configuration>
+                    <altDeploymentRepository>internal.repo::default::file://${project.build.directory}/mvn-repo</altDeploymentRepository>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>com.github.github</groupId>
+                <artifactId>site-maven-plugin</artifactId>
+                <version >0.12</version>
+                <configuration>
+                    <message >Maven artifacts for ${project.version}</message>
+                    <noJekyll>true</noJekyll>
+                    <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory><!--本地jar地址-->
+                    <branch>refs/heads/master</branch><!--分支的名称-->
+                    <merge>true</merge>
+                    <includes>
+                        <include>**/*</include>
+                    </includes>
+                    <repositoryName>mvn-repo</repositoryName><!--对应github上创建的仓库名称 name-->
+                    <repositoryOwner>ljx95</repositoryOwner><!--github 仓库所有者即登录用户名-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>site</goal>
+                        </goals>
+                        <phase>deploy</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
